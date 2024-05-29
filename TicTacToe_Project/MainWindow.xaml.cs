@@ -20,5 +20,11 @@ namespace TicTacToe_Project
         {
             InitializeComponent();
         }
+
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainScreen.Hide();
+            MainScreen.Show();
+        }
     }
 }
