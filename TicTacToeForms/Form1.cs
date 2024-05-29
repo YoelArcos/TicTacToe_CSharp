@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,13 +15,18 @@ namespace TicTacToeForms
     public partial class TicTacToc_MainScreen : Form
     {
         bool playerTurn = true;
-        int gamesPlayed = 0;
+        
+
+        int playerOneWins = 1;
+        int playerTwoWins = 1; 
         public TicTacToc_MainScreen()
         {
-            InitializeComponent();
+           
+            
+                InitializeComponent();
+            
         }
-      
-        private void btn_Reset_Click(object sender, EventArgs e)
+        public void reset_Buttons()
         {
             button1.Text = "";
             button2.Text = "";
@@ -30,21 +37,30 @@ namespace TicTacToeForms
             button7.Text = "";
             button8.Text = "";
             button9.Text = "";
+        }
+        private void btn_Reset_Click(object sender, EventArgs e)
+        {
+            reset_Buttons();
+            
 
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
+          
+                Button btn = (Button)sender;
 
-            if (btn.Text == "" )
-            {
-                btn.Text = playerTurn ? "X" : "O";
-                playerTurn = !playerTurn;
-                
-            }
-            CheckForWinner();
-            label_gamesPlayed.Text = gamesPlayed++.ToString();
+                if (btn.Text == "")
+                {
+                    btn.Text = playerTurn ? "X" : "O";
+                    playerTurn = !playerTurn;
+
+                }
+                CheckForWinner();
+           
+            
+           
 
             
         }
@@ -86,25 +102,24 @@ namespace TicTacToeForms
                 {
                     // Ein Gewinner wurde gefunden
                     MessageBox.Show("Der Gewinner ist " + b1.Text);
-                    disableButtons();
+
+                    if (b1.Text.Contains("X"))
+                    {
+                        textBox_PlayerWins.Text = playerOneWins++.ToString(); 
+                    } else if (b1.Text.Contains("O"))
+                    {
+                        textBox_PlayerTwoWins.Text = playerTwoWins++.ToString();
+                    }
+
+                    reset_Buttons();
+
                     break; // Beende die Schleife, nachdem ein Gewinner gefunden wurde
+                    
                 }
             }
         }
 
-        private void disableButtons()
-        {
-            // Durchlaufe alle Controls und deaktiviere alle Buttons
-            foreach (Control c in Controls)
-            {
-                Button b = c as Button;
-                if (b != null)
-                {
-                    b.Enabled = false; // Deaktiviere den Button
-                }
-            }
-        }
-
+       
         private void TicTacToc_MainScreen_Load(object sender, EventArgs e)
         {
 

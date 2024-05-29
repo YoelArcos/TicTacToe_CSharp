@@ -42,8 +42,6 @@
             this.textBox_PlayerTwoWins = new System.Windows.Forms.TextBox();
             this.label_PlayerWins = new System.Windows.Forms.Label();
             this.label_PlayerTwoWins = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label_gamesPlayed = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -146,7 +144,7 @@
             // 
             // textBox_PlayerTwoWins
             // 
-            this.textBox_PlayerTwoWins.Location = new System.Drawing.Point(12, 213);
+            this.textBox_PlayerTwoWins.Location = new System.Drawing.Point(621, 134);
             this.textBox_PlayerTwoWins.Name = "textBox_PlayerTwoWins";
             this.textBox_PlayerTwoWins.Size = new System.Drawing.Size(138, 22);
             this.textBox_PlayerTwoWins.TabIndex = 11;
@@ -167,29 +165,11 @@
             this.label_PlayerTwoWins.AutoSize = true;
             this.label_PlayerTwoWins.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_PlayerTwoWins.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_PlayerTwoWins.Location = new System.Drawing.Point(12, 194);
+            this.label_PlayerTwoWins.Location = new System.Drawing.Point(618, 106);
             this.label_PlayerTwoWins.Name = "label_PlayerTwoWins";
             this.label_PlayerTwoWins.Size = new System.Drawing.Size(119, 16);
             this.label_PlayerTwoWins.TabIndex = 13;
             this.label_PlayerTwoWins.Text = "Player Two wins";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(15, 302);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 22);
-            this.textBox1.TabIndex = 14;
-            // 
-            // label_gamesPlayed
-            // 
-            this.label_gamesPlayed.AutoSize = true;
-            this.label_gamesPlayed.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_gamesPlayed.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_gamesPlayed.Location = new System.Drawing.Point(13, 270);
-            this.label_gamesPlayed.Name = "label_gamesPlayed";
-            this.label_gamesPlayed.Size = new System.Drawing.Size(108, 16);
-            this.label_gamesPlayed.TabIndex = 15;
-            this.label_gamesPlayed.Text = "Games played";
             // 
             // TicTacToc_MainScreen
             // 
@@ -197,8 +177,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label_gamesPlayed);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label_PlayerTwoWins);
             this.Controls.Add(this.label_PlayerWins);
             this.Controls.Add(this.textBox_PlayerTwoWins);
@@ -239,8 +217,6 @@
         private System.Windows.Forms.TextBox textBox_PlayerTwoWins;
         private System.Windows.Forms.Label label_PlayerWins;
         private System.Windows.Forms.Label label_PlayerTwoWins;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label_gamesPlayed;
     }
 }
 
